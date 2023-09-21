@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="./main.js" defer></script>
+
+    <title>Tip calculator app</title>
+
+
+  </head>
+  <body>
+    <main>
+      <div class="contenedorPrincipal">
+        <div class="logo-general">
+          <img src="./images/logo.svg" alt="project logo">
+        </div>
+        
+          <div class="contenedor">
+            <div class="calculos">
+              <div class="seccionBill">
+                <div class="label-small">
+                  <label for="billValue">BILL</label>
+                  <small class="alertaEscondida" id="alertaBillValue">Can't be zero</small>
+                </div>
+                <div class="icono-input" id="inputBillValue">
+                  <img src="./images/icon-dollar.svg" alt="dollar icon">
+                  <input type="number" class="entrada" id="billValue" placeholder="0">
+                </div>
+              </div>
+              <div class="seccionSelectTip">
+                <div class="label-small">
+                  <label>Select Tip %</label>
+                  <small class="alertaEscondida" id="alertaTip">Please, select a valid %</small>
+                </div>
+                <div class="seccionBotones">
+                  <button class="porcentaje" id="cinco" value="5">5%</button>
+                  <button class="porcentaje" id="diez" value="10">10%</button>
+                  <button class="porcentaje" id="quince" value="15">15%</button>
+                  <button class="porcentaje" id="veinticinco" value="25">25%</button>
+                  <button class="porcentaje" id="cincuenta" value="50">50%</button>
+                  <div class="input-pequeno">
+                    <input class="porcentaje" id="propinaPersonalizada" placeholder="Custom" type="number">
+                  </div>
+                </div>
+              </div>
+              <div class="seccionNoPeople">
+                
+                <div class="label-small">
+                  <label for="noPersonas">Number of People</label>
+                  <small class="alertaEscondida" id="alertaNoPersonas">Can't be zero</small>
+                </div>
+                <div class="icono-input" id="inputNoPersonas">
+                  <img src="./images/icon-person.svg" alt="person icon">
+                  <input type="number" class="entrada" id="noPersonas" placeholder="1">
+                </div>  
+              </div>
+            </div>
+            <div class="resultados">
+              <div class="resultadosCentro">
+                <div class="resultadosArriba">
+                  <div class="seccionResultados">
+                    <div class="seccionLetras">
+                      <p class="tituloResultado">Tip Amount</p>
+                      <b>/ person</b>
+                    </div>
+                    <div class="seccionNumeros">
+                      <p class="resultado" id="resultadoTip">$0.00</p>
+                    </div>
+                  </div>
+                  <div class="seccionResultados">
+                    <div class="seccionLetras">
+                      <p class="tituloResultado">Total</p>
+                      <b>/ person</b>
+                    </div>
+                    <div class="seccionNumeros">
+                      <p class="resultado" id="resultadoTotal">$0.00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="resultadosBoton">
+                  <button class="resetBtn" id="resetBtn" type="submit">RESET</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </main>
+  </body>
+</html>
